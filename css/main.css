@@ -33,13 +33,20 @@ main{
     width: 30%;
     float:right;
 }
-.menu ul li{
-    margin-left: 20px;
-    zoom: 120%;
-    display: inline-block;
-}
 .header2{
     background-color: #ffff;
     width:100%;
     border-bottom: 3px solid black;
+}
+.menu ul li{
+    margin-left: 20px;
+    color: #8b8b8b;
+    display: inline-block;
+}
+.menu ul li a{
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size:20px;
+    text-transform: uppercase;
+    
 }
