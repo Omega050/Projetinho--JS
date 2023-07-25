@@ -37,7 +37,7 @@ main {
 }
 
 .menu-urls {
-    height:60px;
+    height: 60px;
     border-bottom: 3px solid #efefef;
 }
 
@@ -68,11 +68,11 @@ main {
     text-align: center;
 }
 
-.search input{
+.search input {
     background-image: url('../img/Search-Icon.png');
     background-repeat: no-repeat;
     background-position: right;
-    background-size:contain;
+    background-size: contain;
     margin-top: 27px;
     width: 1000px;
     margin-left: 30px;
