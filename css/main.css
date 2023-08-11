@@ -106,7 +106,6 @@ main {
 
   flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
   justify-content: space-between; /* Space between cards */
-  align-items: ; /* Align cards to the top */
   margin: 20px auto; /* Adjust margin for centering */
   width: 1500px;
 }
