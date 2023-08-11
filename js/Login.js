@@ -22,7 +22,7 @@ function setCookie(name, value) {
       alert("Bem-vindo, administrador!");
       setCookie("userType", "admin");
       window.location.href = "admPage.html";
-    } else if (username === "usuario" && password === "usuario123") {
+    } else if (username === "user" && password === "user123") {
       alert("Login bem-sucedido como usuário!");
       setCookie("userType", "user");
       window.location.href = "userPage.html";
