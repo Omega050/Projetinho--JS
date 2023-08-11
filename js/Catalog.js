@@ -1,6 +1,7 @@
 // Sample product data
 const products = [
     { title: "Trembo", price: "R$100" },
+    { title: "Durateston", price: "R$24,24"},
     { title: "Product 2", price: "R$200" },
     { title: "Product 3", price: "R$100" },
     { title: "Product 3", price: "R$100" },
