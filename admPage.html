@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/estoque.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -39,18 +39,51 @@
                 </div>
             </div>
         </main>
-        <d
+        <div id="Estoque" class="Estoque">
+            <estoque>
+    
+                <div id="" class="titulo">
+                    Cadastrar Produto
+                </div>
+                <div id="cadastrarEstoque" class="cadastrarEstoque">
+                    <div class="txtCadastro">Nome do Produto</div>
+                    <div class="campoCadastro">
+                        <input type="text" name="productName" id="productName">
+                    </div>
+                    <div class="txtCadastro">Preço</div>
+                    <div class="campoCadastro">
+                        <input type="text" name="price" id="price" class="price">
+                    </div>
+                    <div class="txtCadastro">Imagem .png</div>
+                    <div class="campoCadastro">
+                        <input type="text" name="img" id="img" class="img">
+                    </div>
+                    <div class="btnCadastro">
+                        <button onclick="newProduct()" class="btn">
+                            <p>Cadastrar</p>
+                        </button>
+                    </div>
+                </div>
+            </estoque>
+        </div>
+    </body>
     </header>
-
-
     
     <div class="botaoLogin">
         <button onclick="logout()" id="btn_login" class="btn">
             <p>Sair</p>
         </button>
     </div>
-
+    <div id="productList">
+        <ul id="productListItems">
+            <!-- Produtos serão adicionados aqui -->
+        </ul>
+    </div>
+    <script src="js/Catalog.js"></script>
     <script src="js/Login.js"></script>
+    <script>
+        window.addEventListener("load", displayProducts);
+        </script>
 </body>
 
 </html>

@@ -56,8 +56,16 @@
     </main>
     <div class="CardList" id="catalogContainer">
     </div>
-
+    <div id="productList">
+        <ul id="productListItems">
+            <!-- Produtos serão adicionados aqui -->
+        </ul>
+    </div>
     <script src ="js/Catalog.js"></script>
+    <script>generateCatalog()
+      window.addEventListener("load", displayProducts);
+      </script>
+
 </body>
 
 </html>
