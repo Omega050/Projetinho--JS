@@ -1,13 +1,14 @@
-// Sample product data
-var products = [
+var products = JSON.parse(localStorage.getItem('products')) || [
     { title: "Losartana 50mg 30 cpr", price: "R$100", image: "losartana.png" },
     { title: "Dorflex 36 cpr", price: "R$24,24", image: "dorflex.png" },
     { title: "Aspirina 500mg 20cpr", price: "R$200", image: "aspirina.png" },
     { title: "Epocler 10ml", price: "R$100", image: "epocler.png" },
-    { title: "Loratadina 1mg/ml XPE c/100 ml", price: "R$12,41", image: "loratadina.png" }, 
-    // Add more product objects as needed
+    { title: "Loratadina 1mg/ml XPE c/100 ml", price: "R$12,41", image: "loratadina.png" },
 ];
-products.push({ title: "Dura", price:"R$111,12" , image: "durateston.png"})
+
+function saveProductsToLocalStorage() {
+    localStorage.setItem('products', JSON.stringify(products));
+}
 
 function newProduct(){
     const productName = document.getElementById("productName").value;
@@ -15,15 +16,19 @@ function newProduct(){
     const img = document.getElementById("img").value;
 
     products.push({title: productName, price: price, image: img});
+    saveProductsToLocalStorage();
 
     document.getElementById("productName").value = "";
     document.getElementById("price").value = "";
     document.getElementById("img").value = "";
+
+    generateCatalog();
+    displayProducts();
 }
 
-// Function to generate card elements
 function generateCatalog() {
     const catalogContainer = document.getElementById("catalogContainer");
+    catalogContainer.innerHTML = "";
 
     products.forEach(product => {
         const card = document.createElement("div");
@@ -51,6 +56,7 @@ function generateCatalog() {
 
 function displayProducts() {
     const productListItems = document.getElementById("productListItems");
+    productListItems.innerHTML = "";
 
     products.forEach(product => {
         const listItem = document.createElement("li");
