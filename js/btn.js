@@ -1,5 +1,5 @@
 const senha = document.querySelector('.senha');
-const btn = document.querySelector('.exibirSenha'); // Alterado para a classe 'exibirSenha'
+const btn = document.querySelector('.exibirSenha');
 
 btn.onclick = () => {
     if (senha.type === 'password') {

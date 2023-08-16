@@ -1,8 +1,8 @@
 var products = JSON.parse(localStorage.getItem('products')) || [
-    { title: "Losartana 50mg 30 cpr", price: "R$100", image: "losartana.png" },
-    { title: "Dorflex 36 cpr", price: "R$24,24", image: "dorflex.png" },
-    { title: "Aspirina 500mg 20cpr", price: "R$200", image: "aspirina.png" },
-    { title: "Epocler 10ml", price: "R$100", image: "epocler.png" },
+    { title: "Losartana 50mg 30 cpr", price: "R$4,83", image: "losartana.png" },
+    { title: "Dorflex 36 cpr", price: "R$19,99", image: "dorflex.png" },
+    { title: "Aspirina 500mg 20cpr", price: "R$14,98", image: "aspirina.png" },
+    { title: "Epocler 10ml", price: "R$3,99", image: "epocler.png" },
     { title: "Loratadina 1mg/ml XPE c/100 ml", price: "R$12,41", image: "loratadina.png" },
 ];
 
@@ -30,7 +30,7 @@ function generateCatalog() {
     const catalogContainer = document.getElementById("catalogContainer");
     catalogContainer.innerHTML = "";
 
-    products.forEach(product => {
+    products.forEach((product, index) => { // Adicionando o índice ao loop
         const card = document.createElement("div");
         card.className = "card";
 
@@ -46,12 +46,23 @@ function generateCatalog() {
         price.className = "price";
         price.textContent = product.price;
 
+       
+        card.addEventListener("click", () => {
+            redirectToProductPage(index); 
+        });
+
         card.appendChild(image);
         card.appendChild(title);
         card.appendChild(price);
 
         catalogContainer.appendChild(card);
     });
+}
+
+function redirectToProductPage(index) {
+    const product = products[index];
+    const url = `product.html?id=${index}&title=${encodeURIComponent(product.title)}&price=${encodeURIComponent(product.price)}&image=${encodeURIComponent(product.image)}`;
+    window.location.href = url;
 }
 
 function displayProducts() {

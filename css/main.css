@@ -180,7 +180,6 @@ main {
   }
   
   .card:active::after {
-    content: "Added !";
     height: 3.125em;
   }
   
