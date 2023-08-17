@@ -39,9 +39,16 @@
                 </div>
             </div>
         </main>
+        <div id="productListContainer" class="product-list-container">
+            <h2>Produtos Cadastrados</h2>
+            <div id="productListBorder"class="productListBorder">
+            <ul id="productListItems">
+                <!-- Products will be added here -->
+            </ul>
+        </div>
+        </div>
         <div id="Estoque" class="Estoque">
-            <estoque>
-    
+            <estoque>    
                 <div id="" class="titulo">
                     Cadastrar Produto
                 </div>
@@ -68,19 +75,8 @@
         </div>
     </body>
     </header>
-    
-    <div class="botaoLogin">
-        <button onclick="logout()" id="btn_login" class="btn">
-            <p>Sair</p>
-        </button>
-    </div>
-    <div id="productList">
-        <ul id="productListItems">
-            <!-- Produtos serão adicionados aqui -->
-        </ul>
-    </div>
+     
     <script src="js/Catalog.js"></script>
-    <script src="js/Login.js"></script>
     <script>
         window.addEventListener("load", displayProducts);
         </script>

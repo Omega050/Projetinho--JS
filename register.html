@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="menu-principal">
+        <main>
+            <div class="header1">
+                <div class="logo">
+                    <a id="logo-link" href="./index.html">
+                        <img src="./img/logo.png">
+                    </a>
+                </div>
+                <div class="bar">
+                    <ul>
+                        <li>
+                            <a href="login.html">
+                                <img src="./img/user.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart">
+                                <img src="./img/shopping-cart.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="box">
+                                <img src="./img/Encomendas.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div id="fundoLogin" class="fundoLogin">
+        <baseLogin>
+
+            <form class="form">
+                <p class="title">Criar Conta</p>
+                    <div class="flex">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" name="firstName" id="firstName">
+                        <span>Nome</span>
+                    </label>
+            
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" name="lastName" id="lastName">
+                        <span>Sobrenome</span>
+                    </label>
+                </div>  
+                <label>
+                    <input required="" placeholder="" type="email" class="input">
+                    <span>Email</span>
+                </label> 
+                        
+                <label>
+                    <input required="" placeholder="" type="username" class="input">
+                    <span>Nome de Usuário</span>
+                </label> 
+                    
+                <label>
+                    <input required="" placeholder="" type="password" class="input">
+                    <span>Senha</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="password" class="input">
+                    <span>Confirmar Senha</span>
+                </label>
+                <button class="submit" onsubmit="register(event)">Cadastrar</button>
+                <p class="signin">Já tem uma conta ? <a href="login.html">Faça Login</a> </p>
+            </form>
+        </baseLogin>
+    </div>
+    <script src="js/Login.js"></script>
+</body>
+
+</html>

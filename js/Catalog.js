@@ -18,19 +18,14 @@ function newProduct(){
     products.push({title: productName, price: price, image: img});
     saveProductsToLocalStorage();
 
-    document.getElementById("productName").value = "";
-    document.getElementById("price").value = "";
-    document.getElementById("img").value = "";
-
-    generateCatalog();
-    displayProducts();
+    location.replace(location.href);
 }
 
 function generateCatalog() {
     const catalogContainer = document.getElementById("catalogContainer");
     catalogContainer.innerHTML = "";
 
-    products.forEach((product, index) => { // Adicionando o índice ao loop
+    products.forEach((product, index) => { 
         const card = document.createElement("div");
         card.className = "card";
 
@@ -71,6 +66,7 @@ function displayProducts() {
 
     products.forEach(product => {
         const listItem = document.createElement("li");
+        listItem.className = "product-list-item"; 
         listItem.textContent = `${product.title} - ${product.price}`;
         productListItems.appendChild(listItem);
     });
