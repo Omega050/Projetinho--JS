@@ -18,15 +18,14 @@ function login() {
     if (user.username === "admin") {
       window.location.href = "admPage.html"; 
     } else {
-      window.location.href = "userPage.html"; 
+      alert(`Bem vindo ${user.name}`);
+      window.location.href = "index.html"; 
     }
   } else {
     alert("Usuário ou senha incorretos.");
   }
 }
-function register(event) {
-  event.preventDefault(); // Impede o comportamento padrão do formulário
-  
+function register() {  
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
   const name = `${firstName} ${lastName}`;

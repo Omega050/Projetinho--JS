@@ -58,24 +58,24 @@
                     </label>
                 </div>  
                 <label>
-                    <input required="" placeholder="" type="email" class="input">
+                    <input required="" placeholder="" type="email" class="input" name="email" id="email">
                     <span>Email</span>
                 </label> 
                         
                 <label>
-                    <input required="" placeholder="" type="username" class="input">
+                    <input required="" placeholder="" type="username" class="input" name="username" id="username">
                     <span>Nome de Usuário</span>
                 </label> 
                     
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
+                    <input required="" placeholder="" type="password" class="input" name="password" id="password">
                     <span>Senha</span>
                 </label>
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
+                    <input required="" placeholder="" type="password" class="input" name="confirmPassword" id="confirmPassword">
                     <span>Confirmar Senha</span>
                 </label>
-                <button class="submit" onsubmit="register(event)">Cadastrar</button>
+                <button class="submit" onclick="register()">Cadastrar</button>
                 <p class="signin">Já tem uma conta ? <a href="login.html">Faça Login</a> </p>
             </form>
         </baseLogin>
